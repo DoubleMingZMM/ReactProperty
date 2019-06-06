@@ -12,15 +12,23 @@ import ErrorBoundary from './components/ErrorBoundary/index.js';
 /* 测试modal 使用portal */
 import TestModal from './components/PortalModal/testModal.js';
 
+/* 测试strictMode */
+import StrictMode from './components/StrictMode';
+
+/* 测试过时的context */
+import Context from './components/context/dadClass.js';
+
 
 
 function App() {
   return (
-    <ErrorBoundary>
-      <div className="App">
-        <TestModal />
-      </div>
-    </ErrorBoundary >
+    <StrictMode>
+      <ErrorBoundary>
+        <div className="App">
+          <Context />
+        </div>
+      </ErrorBoundary >
+    </StrictMode>
   );
 }
 
